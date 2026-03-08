@@ -1,6 +1,7 @@
 package org.example;
 
 import jakarta.persistence.*;
+import org.example.Enums.CustomerStatus;
 
 import java.time.LocalDateTime;
 
