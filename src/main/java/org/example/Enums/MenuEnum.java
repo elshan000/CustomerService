@@ -1,4 +1,5 @@
 package org.example.Enums;
+
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.example.Strategy.*;
@@ -7,7 +8,7 @@ import org.example.Strategy.*;
 @RequiredArgsConstructor
 
 public enum MenuEnum {
-    CREATE_CUSTOMER(1,"Create customer", new CreateCustomer());
+    CREATE_CUSTOMER(1, "Create customer", new CreateCustomer());
     // REMOVE_CUSTOMER(2,"Remove Customer",  new RemoveCustomer()),
     // UPDATE_CUSTOMER(3, "Update Customer", new UpdateCustomerStrategy()),
     // SHOW_ALL_CUSTOMER(4, "Show all customer",new ShowAllCustomerStrategy()),
@@ -21,14 +22,14 @@ public enum MenuEnum {
     private final String description;
     private final int value;
 
-    MenuEnum(int value , String description, CreateCustomer strategy) {
+    MenuEnum(int value, String description, CreateCustomer strategy) {
         this.description = description;
         this.value = value;
     }
 
-    public static MenuEnum getEnumOption(int value){
-        for(MenuEnum menuEnum : MenuEnum.values()){
-            if(menuEnum.getValue()==value){
+    public static MenuEnum getEnumOption(int value) {
+        for (MenuEnum menuEnum : MenuEnum.values()) {
+            if (menuEnum.getValue() == value) {
                 return menuEnum;
             }
         }
